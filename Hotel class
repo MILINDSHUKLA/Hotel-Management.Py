@@ -1,0 +1,43 @@
+class hotel: 
+
+    def hotel_(self, Rno, Name, Tariff, NOD, x, y): 
+        self.Rno = 0 
+        self.Name = Name 
+        self.Tariff = 0 
+        self.NOD = 0 
+        self.x = NOD*Tariff 
+        self.y = 0 
+
+    def CALC(self): 
+        self.x = (self.NOD)*(self.Tariff) 
+        if self.x < 10000: 
+            print("RETURNED = Rs.",self.x) 
+        else: 
+            self.y = (self.x)*1.05 
+            print("RETURNED = Rs. ",self.y) 
+           
+    def Checkin(self): 
+        self.Rno=int(input("Room number:")) 
+        self.Name=str(input("Name of the person:")) 
+        self.Tariff=float(input("Per day charge:")) 
+        self.NOD=int(input("eneter the number of number of days:")) 
+
+    def Checkout(self): 
+        print("room num",self.Rno)  
+        print("name:",self.Name) 
+        print("tariff:",self.Tariff) 
+        print("Total number  of days:",self.NOD) 
+        s.CALC() 
+
+s=hotel() 
+Rno=0 
+Name=0 
+Tariff=0 
+NOD=0 
+x=0 
+y=0 
+
+s.hotel_(Rno,Name,Tariff,NOD,x,y)   
+s.Checkin() 
+s.CALC() 
+s.Checkout()
